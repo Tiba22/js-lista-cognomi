@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Lista Cognomi</title>
+</head>
+<body>
+
+  <div
+  id="list">
+</div>
+
+<span id="position"></span>
+
+</body>
+
+
+<script type="text/javascript">
+
+// GOAL:
+// Chiedere all'utente il suo cognome e inserirlo in un array non ordinato.
+// Riordinare l'array e stampare la lista dei cognomi in ordine alfabetico
+// e la posizione "umana" (partendo da 1) del cognome dell'utente.
+
+var cognomi = ['Dongu', 'Masnada', 'Brogno', 'Fazio', 'Armiento', 'Venti', 'Demina', 'Lomarco', 'Sainato', 'Cappelletti'];
+cognomi.push(prompt('Inserisci il tuo cognome: '));
+
+var tuoCognome = cognomi[(cognomi.length - 1)];
+
+console.log(cognomi);
+console.log('Il tuo cognome è: ' + tuoCognome);
+
+cognomi.sort();
+console.log('Lista ordinata' , cognomi);
+
+var cont = 0;
+while(cognomi[cont] != tuoCognome){
+  cont++;
+}
+console.log('Ti trovi in ' + [cont + 1] + '° posizione!');
+
+</script>
+</body>
+</html>
